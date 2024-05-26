@@ -6,3 +6,14 @@ button a {
     color: #fff;
     font-size: 12px;
 }
+
+.btn-class {
+    background-color: green;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+.btn-class:hover{
+    background-color: #fff;
+    color: red;
+}
