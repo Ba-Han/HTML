@@ -8,6 +8,14 @@
 <body>
     <p id="clickMe"></p>
     <button type="button" onclick="doSomething()">Clie me to display the date and time.</button>
+    <form action="">
+        <label>FirstName</label>
+        <input type="text" id="firstname" placeholder="enter your first name" /> <br /> <br />
+        <label>LastName</label>
+        <input type="text" id="lastname" placeholder="enter your lastname" /><br /> <br />
+        <p id="displayFullName"></p> <br /> <br />
+        <button style="background-color: green; height: 20px; width: 50px; color: white;" onclick="saveMe()">Save</button>
+    </form>
 
     <script>
         function doSomething() {
@@ -15,6 +23,15 @@
             document.getElementById("clickMe").style.backgroundColor = "Yellow";
             document.getElementById("clickMe").style.fontSize = "25px";
             document.getElementById("clickMe").style.border = "1px solid black";
+        }
+
+        function saveMe() {
+         let firstName = document.getElementById("firstname").value;
+         let lastName = document.getElementById("lastname").value;
+         let displayName;
+         displayName = firstName + " " + lastName;
+         document.getElementById("displayFullName").innerHTML = displayName;
+         document.getElementById("displayFullName").style.backgroundColor = "Green";
         }
     </script>
 </body>
